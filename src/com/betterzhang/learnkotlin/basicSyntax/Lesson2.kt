@@ -1,4 +1,4 @@
-package com.betterzhang.learnkotlin.BasicSyntax
+package com.betterzhang.learnkotlin.basicSyntax
 
 /**
  * Created by IntelliJ IDEA.

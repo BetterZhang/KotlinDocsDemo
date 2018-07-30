@@ -1,8 +1,6 @@
-package com.betterzhang.learnkotlin.Idioms
+package com.betterzhang.learnkotlin.idioms
 
 import java.io.File
-import java.nio.file.Files
-import java.nio.file.Paths
 
 /**
  * Created by IntelliJ IDEA.

@@ -1,8 +1,7 @@
 // 定义包
-package com.betterzhang.learnkotlin.BasicSyntax
+package com.betterzhang.learnkotlin.basicSyntax
 
 // 导入包
-import java.util.*
 
 /**
  * Created by IntelliJ IDEA.
