@@ -35,4 +35,17 @@ fun main(args: Array<String>) {
     println("person1 == person2: ${person1 == person2}")
     println("person1 with age ${person1.age}: $person1")
     println("person2 with age ${person2.age}: $person2")
+
+    // 复制
+    val jack = User(name = "Jack", age = 1)
+    val olderJack = jack.copy(age = 2)
+
+    println(jack)
+    println(olderJack)
+
+    // 数据类与解构声明
+    val jane = User("Jane", 35)
+    val (name, age) = jane
+    println("$name, $age years of age")
+
 }
