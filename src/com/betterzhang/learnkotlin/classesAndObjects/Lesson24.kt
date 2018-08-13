@@ -1,6 +1,7 @@
 package com.betterzhang.learnkotlin.classesAndObjects
 
 import kotlin.properties.Delegates
+import kotlin.reflect.KProperty
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,6 +16,19 @@ import kotlin.properties.Delegates
 //——延迟属性（lazy properties）: 其值只在首次访问时计算；
 //——可观察属性（observable properties）: 监听器会收到有关此属性变更的通知；
 //——把多个属性储存在一个映射（map）中，而不是每个存在单独的字段中。
+
+class Example2 {
+    var p: String by Delegate()
+}
+
+class Delegate {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
+        return "$thisRef, thank you for delegating '${property.name}' to me!"
+    }
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
+        println("$value has been assigned to '${property.name}' in $thisRef.")
+    }
+}
 
 // 延迟属性lazy
 val lazyValue: String by lazy {
@@ -38,6 +52,10 @@ class User3(val map: Map<String, Any?>) {
 
 
 fun main(args: Array<String>) {
+    val e = Example2()
+    println(e.p)
+    e.p = "NEW"
+
     println(lazyValue)
     println(lazyValue)
 
